@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Data Dashboard</title>
+    
+    <!-- CSS langsung di dalam file HTML -->
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Layout */
+        body {
+            font-family: Arial, sans-serif;
+            color: #484848;
+            background-color: #F2F2F2;
+        }
+
+        header {
+            text-align: center;
+            background-color: #FF5A5F;
+            color: #FFFFFF;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        main {
+            display: flex;
+            max-width: 1200px;
+            margin: 2rem auto;
+            gap: 2rem;
+        }
+
+        /* Sidebar Navigation */
+        aside {
+            width: 20%;
+            padding: 1rem;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+        }
+
+        aside nav ul {
+            list-style: none;
+        }
+
+        aside nav ul li {
+            margin-bottom: 1rem;
+        }
+
+        aside nav ul li a {
+            text-decoration: none;
+            color: #FF5A5F;
+            font-weight: bold;
+        }
+
+        /* Dashboard Content */
+        #dashboard-content {
+            width: 80%;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #484848;
+            color: #FFFFFF;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Airbnb Data Dashboard</h1>
+        <p>Insightful analysis of Airbnb listings, reviews, and host performance</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Sidebar for Navigation -->
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#location">Location Analysis</a></li>
+                    <li><a href="#pricing">Pricing Insights</a></li>
+                    <li><a href="#reviews">Reviews & Ratings</a></li>
+                    <li><a href="#hosts">Host Analysis</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Dashboard Content Area -->
+        <section id="dashboard-content">
+            <!-- Embedded Looker Studio Dashboard -->
+            <iframe 
+                src="https://lookerstudio.google.com/embed/reporting/60815963-784f-49e1-945a-adad6a8dc3e9/page/zkARE" 
+                title="Airbnb Dashboard" 
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Airbnb Dashboard Analysis</p>
+    </footer>
+
+    <!-- JavaScript langsung di dalam file HTML -->
+    <script>
+        // JavaScript for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
